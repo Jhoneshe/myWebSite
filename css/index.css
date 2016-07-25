@@ -1,0 +1,499 @@
+/*basic*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	height: 100%;
+}
+body{
+  	background-image: radial-gradient(#eee,black);
+	background-size: 100% 100%;
+    font-family: '微软雅黑';
+    font-size: 16px;
+    line-height: 30px;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+div img{
+	display: block;
+	width: 100%;
+}
+#container{
+	width: 1000px;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/*music*/
+.music-container{
+	position: fixed;
+	top: 0;
+	right: 200px;
+	z-index: 999;
+	width: 120px;
+	height: 140px;
+}
+.music{
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	cursor: pointer;
+    /*border-radius: 50%; */
+}
+.music-side{
+	position: absolute;
+	width: 60px;
+	left: 50px;
+	top: -8px;
+	transition: all 0.3s;
+}
+.music-side img{
+	display: block;
+	width: 100%;	
+}
+.play-bar{
+	transform: rotate(30deg);
+	transform-origin: left top; 
+}
+
+/*page*/
+.page{
+	width: 96%;
+	height: 96%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 2% 0 0 2%;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+.page h2{
+    padding-top: 30px;
+    padding-left: 40px;
+    color: #000;
+}
+.page h2 span{
+	font-size: 60px;
+	color: #fff;
+	text-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.run{
+	animation: run 2s infinite linear;
+}
+
+/*side*/
+#side{
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -400px;
+	background-color: rgba(0,0,0,0.6);
+    transition: all 0.5s;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 20px;
+}
+#side ul{
+    padding: 20px 20px;
+}
+#side li{
+    height: 46px;
+    padding: 0 10px;
+    line-height: 46px;
+    cursor: pointer;
+}
+@keyframes run{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+/*meun*/
+#menu{
+	width: 120px;
+	height: 120px;
+    position: absolute;
+    top: 30px;
+    left: 420px;
+    z-index: 20;
+    transition: all 0.5s;
+    cursor: pointer;
+    transform-origin: top center;
+}
+
+#menu:hover{
+    transform: scale(1.1);
+}
+
+#menu span{
+    position: absolute;
+    left: -100px;
+    top: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.5s;
+    animation: shine 1s infinite linear;
+    animation-direction: alternate;
+}
+@keyframes shine {
+    0%{
+        text-shadow: 0 0 10px rgba(255,255,255,0.8);
+    }
+    100%{
+        text-shadow: 0 0 10px rgba(0,0,255,0.8);
+    }
+}
+.head-pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -50px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.8);
+    transition: all 0.3s;
+}
+.head-pic:hover{
+    transform: scale(1.08);
+}
+
+.current{
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 10px;
+}
+
+/*home-page*/
+.home-page{
+    width: 900px;
+    height: 726px;
+    margin: 80px auto;
+    /*background: url("../images/home_bg.png") no-repeat;*/
+    background-size: 100% 100%;
+}
+.home-page h1{
+    width: 900px;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    margin-left: -450px;
+    text-align: center;
+    animation: title-enter 2s;
+}
+.home-page p{
+    position: absolute;
+    width: 680px;
+    font-size: 16px;
+    text-indent: 32px;
+    top: 340px;
+    left: 50%;
+    margin-left: -340px;
+    animation: p-enter 1.5s;
+    transform-origin: left center; 
+}
+.home-page strong{
+    font-size: 20px;
+}
+
+.home-page #click-me:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+@keyframes title-enter {
+    0%{
+        top: -400px;
+        opacity: 0;
+    }
+    100%{
+        top: 170px;
+        opacity: 1;
+    }
+}
+@keyframes p-enter {
+    0%{
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+    25%{
+    	transform: rotate(10deg);
+    	opacity: 1;
+    }
+    50%{
+    	transform: rotate(-10deg);
+    }
+    75%{
+    	transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0);
+        /*margin-left: -340px;*/
+    }
+}
+
+/*basic-info*/
+.basic-information{
+    width: 640px;
+    height: 380px;
+    margin: 60px auto;
+    padding: 20px;
+    border: 2px dashed #000;
+    animation: info-enter 1.2s linear;
+}
+.basic-information li{
+    width: 300px;
+    float: left;
+    padding-bottom: 10px;
+}
+.basic-information span{
+    padding: 10px;
+    font-size: 20px;
+}
+
+@keyframes info-enter {
+    0%{
+        transform: scale(0.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/*skill*/
+.skill{
+    padding: 60px 30px;
+    width: 100%;
+}
+.skill .skill-box{
+    width: 40%;
+    display: inline-block;
+    margin: 0 auto;
+}
+.skill .skill-box div{
+    margin: 0 auto;
+}
+.skill-list{
+	position: absolute;
+	top: 430px;
+	right: 280px;
+	animation: list-enter 1s ease-in;
+	transform-origin: center bottom; 
+}
+.skill-list span{
+	padding-right: 10px;
+}
+@keyframes list-enter{
+	0%{
+		transform: skewX(-30deg);
+		right: -200px;
+	}
+	25%{
+		transform: skewX(30deg);
+		right: 280px;
+	}
+	50%{
+		transform: skewX(-10deg);
+	}
+	75%{
+		transform: skewX(10deg);
+	}
+	100%{
+		transform: skewX(0);
+	}
+}
+
+/*experience*/
+.experience{
+    padding-top: 50px;
+}
+.w-container{
+	width: 610px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -145px -300px;	
+	perspective: 800;
+	-webkit-perspective: 800;
+	perspective-origin: 50% 50%;
+	-webkit-perspective-origin: 50% 50%;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+.works{
+	position: absolute;
+	width: 610px;
+	height: 300px;
+	top: 0;
+	left: 0;
+}
+.demo{
+	position: absolute;
+	width: 600px;
+	height: 290px;
+	border: 5px solid rgba(255,255,255,0.5);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+	transform-origin: center bottom; 
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+	overflow: hidden;
+	transform: rotateX(180deg);
+}
+.demo a{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s
+}
+.demo a:hover{
+	transform: scale(1.1);
+}
+.demo a img{
+	display: block;
+	width: 100%;
+}
+#left-arrow,#right-arrow{
+	width: 100px;
+	height: 100px;
+	font-size: 50px;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	cursor: pointer;
+	transition: all 0.5s
+}
+#left-arrow:hover,#right-arrow:hover{
+	text-shadow: 0 0 10px rgba(0,0,200,0.6);
+}
+#left-arrow{
+	left: -100px;
+}
+#right-arrow{
+	right: -100px;
+}
+.w-show{
+	animation: w-show  1s; 
+	animation-fill-mode: forwards;
+}
+@keyframes w-show{
+	0%{transform: rotateX(180deg);opacity: 0;}
+	25%{transform: rotateX(-30deg);opacity: 1;}				
+	50%{transform: rotateX(10deg);opacity: 1;}				
+	75%{transform: rotateX(-10deg);opacity: 1;}				
+	100%{transform: rotateX(0deg);opacity: 1;}	
+}
+.w-hide{
+	animation: w-hide  0.5s; 
+	animation-fill-mode: forwards;
+}
+@keyframes w-hide{
+	0%{transform: rotateX(0deg);opacity: 1;}
+	100%{transform: rotateX(-180deg);opacity: 0;}
+}
+.w-show2{
+	animation: w-show2  1s; 
+	animation-fill-mode: forwards;
+}
+@keyframes w-show2{
+	0%{transform: rotateX(-180deg);opacity: 0;}
+	25%{transform: rotateX(30deg);opacity: 1;}				
+	50%{transform: rotateX(-10deg);opacity: 1;}				
+	75%{transform: rotateX(10deg);opacity: 1;}				
+	100%{transform: rotateX(0deg);opacity: 1;}	
+}
+.w-hide2{
+	animation: w-hide2  0.5s; 
+	animation-fill-mode: forwards;
+}
+@keyframes w-hide2{
+	0%{transform: rotateX(0deg);opacity: 1;}
+	100%{transform: rotateX(180deg);opacity: 0;}
+}
+
+/*connect*/
+.connect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 300px 30px;
+    animation: connect-enter 1s;
+}
+.connect li{
+    display: inline-block;
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+    font-size: 80px;
+    position: relative;
+}
+.fa-qq{
+    color: #5194d0;
+}
+.fa-wechat{
+    color: #9ed12a;
+    position: relative;
+}
+.fa-github{
+    color: #570d7d;
+}
+.connect li span{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.connect li:hover span{
+    transform: scale(1.2);
+}
+.c-pic{
+	width: 300px;
+	height: 150px;
+	position: absolute;
+	top: -180px;
+	left: -20px;
+	background: url(../images/wechat.jpg) 0 0 no-repeat,
+				url(../images/gzh.jpg) 150px 0 no-repeat;
+	background-size: 150px 150px;
+	border-radius: 10px;
+	opacity: 0;
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+#wechat:hover .c-pic{
+	opacity: 1;
+}
+@keyframes connect-enter {
+    0%{
+        top: 120%;
+    }
+    100%{
+        top: 0;
+    }
+}
